@@ -7,7 +7,7 @@ export default {
     component: TaskList,
     title: 'TaskList',
     decorators: [story => <div style={{ padding: '3rem'}}>{story()}</div>],
-}
+};
 
 const Template = args => <TaskList {...args} />;
 
@@ -30,7 +30,7 @@ WithPinnedTasks.args = {
     //shaping hte stories thru args compostion
     //inherirted data coming from the Default story
     tasks: [
-        ...Default.args.task.slice(0,5),
+        ...Default.args.tasks.slice(0, 5),
         { id: '6', title: 'Task 6 (pinned)', state: 'TASK_PINNED'},
     ],
 };
@@ -47,7 +47,7 @@ Empty.args = {
     //inherited data coming from the Loading story
     ...Loading.args,
     loading: false,
-}
+};
 
 
 
